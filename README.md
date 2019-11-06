@@ -77,3 +77,49 @@ Utilize uma nova tabela no banco de dados chamada `students`.
 O cadastro de alunos só pode ser feito por administradores autenticados na aplicação.
 
 O aluno não pode se autenticar no sistema, ou seja, não possui senha.
+
+#### 3. Funcionalidades do Administrador
+Abaixo estão descritas as funcionalidades na aplicação para administradores.
+
+1. Gestão de planos
+Permite que o usuário(administrador) possa cadastrar planos para matrícula de alunos, o plano possui os seguintes campos:
+
+title (nome do plano);
+duration (duração em número de meses);
+price (preço mensal do plano);
+created_at;
+updated_at;
+
+Planos exemplo:
+
+Start: Plano de 1 mês por R$129;
+Gold: Plano de 3 meses por R$109/mês;
+Diamond: Plano de 6 meses por R$89/mês;
+
+Existem rotas para listagem/cadastro/atualização/remoção de planos;
+
+Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
+
+#### 4. Gestão de Matrículas
+Apesar do aluno estar cadastrado na plataforma, isso não significa que o mesmo tem uma matrícula ativa e que pode acessar a academia.
+
+Nessa funcionalidade criei um cadastro de matrículas por aluno, a matrícula possui os campos:
+
+student_id (referência ao aluno);
+plan_id (referência ao plano);
+start_date (data de início da matrícula);
+end_date (date de término da matrícula);
+price (preço total calculado na data da matrícula);
+created_at;
+updated_at;
+A data de início da matrícula deve ser escolhida pelo usuário(administrador).
+
+A data de término e preço da matrícula deve ser calculada com base no plano selecionado, por exemplo:
+
+Data de início informada: 23/05/2019 Plano selecionado: Gold (3 meses) Data de término calculada: 23/08/2019 (3 meses depois do início) Preço calculado: R$327.
+
+Quando um aluno realiza uma matrícula ele recebe um e-mail com detalhes da sua inscrição na academia como plano, data de término, valor e uma mensagem de boas-vidas.
+
+Existem rotas para listagem/cadastro/atualização/remocação de matrículas;
+
+Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
