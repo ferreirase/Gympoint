@@ -2,9 +2,10 @@ import Student from '../models/student';
 //usa-se * para importar tudo de dentro do Yup pq ele não tem um export default;
 import * as Yup from 'yup';
 import { emit } from 'cluster';
+import {toFixed} from 'tofixed';
 
 class StudentController{
-  async create(req, res){
+  async store(req, res){
     
     const {name, email, age, weight, height} = req.body;
 
@@ -103,6 +104,10 @@ class StudentController{
 
   async showAll(req, res){
     const students = await Student.findAll();
+
+    if(students.length === 0){
+      return res.json({message: 'Nenhum estudante cadastrado'});
+    }
     
     return res.json(students);
   }

@@ -1,4 +1,4 @@
-import Sequelize, {Model} from 'sequelize';
+import Sequelize, {Model, NUMBER} from 'sequelize';
 
 class Student extends Model{
   static init(sequelize){
@@ -7,8 +7,8 @@ class Student extends Model{
         name: Sequelize.STRING,
         email: Sequelize.STRING,
         age: Sequelize.INTEGER, 
-        weight: Sequelize.REAL,
-        height: Sequelize.REAL
+        weight: Sequelize.FLOAT,
+        height: Sequelize.FLOAT
       }, 
       {
         sequelize,
