@@ -66,5 +66,8 @@ routes.delete('/registrations/delete/:id', authMiddleware, RegistrationControlle
 
 //rota para checkin
 routes.post('/checkin/:id', CheckinController.store);
+//rota para exibição de todos os checkins por ID do Aluno
+routes.get('/students/:id/checkins', CheckinController.showCheckins);
+
 
 export default routes;

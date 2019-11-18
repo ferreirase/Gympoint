@@ -58,6 +58,37 @@ class CheckinController{
     return res.status(200).json({message: `Bem-vindo, ${firstName}`}); 
 
   } 
+
+  async showCheckins(req, res){
+    const {id} = req.params;
+
+    const student = await Student.findByPk(id);
+
+    if(!student){
+      return res.status(400).json({error: 'Aluno não encontrado!'});
+    }
+
+    const studentCheckins = await Checkin.findAll({
+      where: {
+        student_id: id
+      },
+      include: [
+        {
+          model: Student, 
+          as: 'checkins', 
+          attributes: ['name']
+        },
+      ]
+    });
+
+    const datesChekins = [];
+
+    studentCheckins.forEach(element => {
+      datesChekins.push(element.createdAt);
+    });
+
+    return res.json({checkins: datesChekins});
+  }
 }
 
 export default new CheckinController();
