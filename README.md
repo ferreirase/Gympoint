@@ -124,7 +124,7 @@ Existem rotas para listagem/cadastro/atualização/remocação de matrículas;
 
 Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
 
-#### 4. Funcionalidades do aluno
+#### 5. Funcionalidades do aluno
 Abaixo estão descritas as funcionalidades para alunos.
 
 1. Checkins
