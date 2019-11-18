@@ -123,3 +123,17 @@ Quando um aluno realiza uma matrícula ele recebe um e-mail com detalhes da sua 
 Existem rotas para listagem/cadastro/atualização/remocação de matrículas;
 
 Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
+
+#### 4. Funcionalidades do aluno
+Abaixo estão descritas as funcionalidades para alunos.
+
+1. Checkins
+Quando o aluno chega na academia o mesmo realiza um check-in apenas informando seu ID de cadastro (ID do banco de dados);
+
+Esse check-in serve para monitorar quantas vezes o usuário frequentou a academia na semana.
+
+A tabela de checkins possui os campos:
+
+O usuário só pode fazer 5 checkins dentro de um período de 7 dias corridos.
+
+Rota para listagem de todos checkins realizados por um usuário com base em seu ID de cadastro;
