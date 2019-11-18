@@ -4,6 +4,7 @@ import SessionController from './src/app/controllers/SessionController';
 import authMiddleware from './src/app/middlewares/auth';
 import PlanController from  './src/app/controllers/PlanController';
 import RegistrationController from './src/app/controllers/RegistrationController';
+import CheckinController from './src/app/controllers/CheckinController';
 
 
 const routes = new Router();
@@ -62,5 +63,8 @@ routes.get('/registrations/show/all', authMiddleware, RegistrationController.sho
 routes.put('/registrations/update/:id', authMiddleware, RegistrationController.update);
 //rota para busca de matrícula por plano
 routes.delete('/registrations/delete/:id', authMiddleware, RegistrationController.delete);
+
+//rota para checkin
+routes.post('/checkin/:id', CheckinController.store);
 
 export default routes;
