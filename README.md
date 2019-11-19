@@ -131,12 +131,17 @@ O usuário só pode fazer 5 checkins dentro de um período de 7 dias corridos.
 Rota para listagem de todos checkins realizados por um usuário com base em seu ID de cadastro;
 
 2. Pedidos de auxílio: O aluno pode criar pedidos de auxílio para a academia em relação a algum exercício, alimentação ou instrução qualquer;
+
 Rota para a academia listar todos pedidos de auxílio sem resposta;
+
 Rota para o aluno cadastrar pedidos de auxílio apenas informando seu ID de cadastro (ID do banco de dados);
 Exemplo de requisição: POST https://gympoint.com/students/3/help-orders
+
 Rota para listar todos pedidos de auxílio de um usuário com base em seu ID de cadastro;
 Exemplo de requisição: GET https://gympoint.com/students/3/help-orders
+
 Rota para a academia responder um pedido de auxílio:
 Exemplo de requisição: POST https://gympoint.com/help-orders/1/answer
+
 
 Quando um pedido de auxílio for respondido, o aluno deve receber um e-mail da plataforma com a pergunta e resposta da academia;
