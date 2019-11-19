@@ -81,8 +81,7 @@ O aluno não pode se autenticar no sistema, ou seja, não possui senha.
 #### 3. Funcionalidades do Administrador
 Abaixo estão descritas as funcionalidades na aplicação para administradores.
 
-1. Gestão de planos
-Permite que o usuário(administrador) possa cadastrar planos para matrícula de alunos, o plano possui os seguintes campos:
+1. Gestão de planos: Permite que o usuário(administrador) possa cadastrar planos para matrícula de alunos, o plano possui os seguintes campos:
 
 title (nome do plano);
 duration (duração em número de meses);
@@ -127,19 +126,15 @@ Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
 #### 5. Funcionalidades do aluno
 Abaixo estão descritas as funcionalidades para alunos.
 
-1. Checkins
-Quando o aluno chega na academia o mesmo realiza um check-in apenas informando seu ID de cadastro (ID do banco de dados);
+1. Checkins: Quando o aluno chega na academia o mesmo realiza um check-in apenas informando seu ID de cadastro (ID do banco de dados);
 
 Esse check-in serve para monitorar quantas vezes o usuário frequentou a academia na semana.
-
-A tabela de checkins possui os campos:
 
 O usuário só pode fazer 5 checkins dentro de um período de 7 dias corridos.
 
 Rota para listagem de todos checkins realizados por um usuário com base em seu ID de cadastro;
 
-2. Pedidos de auxílio
-O aluno pode criar pedidos de auxílio para a academia em relação a algum exercício, alimentação ou instrução qualquer;
+2. Pedidos de auxílio: O aluno pode criar pedidos de auxílio para a academia em relação a algum exercício, alimentação ou instrução qualquer;
 
 Rota para a academia listar todos pedidos de auxílio sem resposta;
 Rota para o aluno cadastrar pedidos de auxílio apenas informando seu ID de cadastro (ID do banco de dados);
