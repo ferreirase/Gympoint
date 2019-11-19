@@ -1,10 +1,11 @@
 import Bee from 'bee-queue';
 import RegistrationMail from '../app/jobs/registrationMail';
+import AnswerMail from '../app/jobs/answerMail';
 import redisConfig from '../config/redis';
 import { never } from 'rxjs';
 
 //array recebendo todos os jobs. sempre q cadastrar um novo, colocar ele dentro array
-const jobs = [RegistrationMail];
+const jobs = [RegistrationMail, AnswerMail];
 
 //pegando todos os jobs e armazenando eles dentro da variável this.queues
 class Queue{

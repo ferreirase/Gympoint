@@ -5,7 +5,7 @@ import authMiddleware from './src/app/middlewares/auth';
 import PlanController from  './src/app/controllers/PlanController';
 import RegistrationController from './src/app/controllers/RegistrationController';
 import CheckinController from './src/app/controllers/CheckinController';
-
+import Help_Order_Controller from './src/app/controllers/HelpOrderController';
 
 const routes = new Router();
 
@@ -69,5 +69,13 @@ routes.post('/checkin/:id', CheckinController.store);
 //rota para exibição de todos os checkins por ID do Aluno
 routes.get('/students/:id/checkins', CheckinController.showCheckins);
 
+//rota para aluno cadastrar pergunta ou pedido de auxílio
+routes.post('/students/:id/help-orders', Help_Order_Controller.store);
+//rota para exibição de pergunta ou pedido de auxílio sem respostas
+routes.get('/help-orders/no-answer', Help_Order_Controller.showWithoutAnswer);
+//rota para exibição de pergunta ou pedido de auxílio por aluno(ID)
+routes.get('/students/:id/help-orders', authMiddleware, Help_Order_Controller.showById);
+//rota para exibição de pergunta ou pedido de auxílio por aluno(ID)
+routes.post('/help-orders/:id/answer', authMiddleware, Help_Order_Controller.answer);
 
 export default routes;
