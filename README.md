@@ -124,18 +124,13 @@ Existem rotas para listagem/cadastro/atualização/remocação de matrículas;
 Obs.: Essa funcionalidade é para administradores autenticados na aplicação.
 
 #### 5. Funcionalidades do aluno
-Abaixo estão descritas as funcionalidades para alunos.
-
+Abaixo estão descritas as funcionalidades para alunos. 
 1. Checkins: Quando o aluno chega na academia o mesmo realiza um check-in apenas informando seu ID de cadastro (ID do banco de dados);
-
 Esse check-in serve para monitorar quantas vezes o usuário frequentou a academia na semana.
-
 O usuário só pode fazer 5 checkins dentro de um período de 7 dias corridos.
-
 Rota para listagem de todos checkins realizados por um usuário com base em seu ID de cadastro;
 
 2. Pedidos de auxílio: O aluno pode criar pedidos de auxílio para a academia em relação a algum exercício, alimentação ou instrução qualquer;
-
 Rota para a academia listar todos pedidos de auxílio sem resposta;
 Rota para o aluno cadastrar pedidos de auxílio apenas informando seu ID de cadastro (ID do banco de dados);
 Exemplo de requisição: POST https://gympoint.com/students/3/help-orders
