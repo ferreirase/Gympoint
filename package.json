@@ -15,7 +15,7 @@
     "datejs": "^1.0.0-rc3",
     "eslint": "^6.4.0",
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^5.3.1",
     "fs": "^0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.2",
